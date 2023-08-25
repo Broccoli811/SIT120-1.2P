@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+</head>
+<body>
+    <h1>String Methods in JavaScript</h1>
+    
+    <p>The length of the string is:</p>
+    <p id="demo1"></p>
+
+    <script>
+        let text1 = "Hello World!";
+        document.getElementById("demo1").innerHTML = text1.length;
+    </script>
+
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo2"></p>
+
+    <script>
+        let text2 = "Red, Yellow, Green";
+        let part = text2.slice(5, 11);
+        document.getElementById("demo2").innerHTML = part; 
+    </script>
+
+    <p>The substring() method extracts a part of a string and returns the extracted parts in a new string:</p>
+    <p id="demo3"></p>
+
+    <script>
+        let text3 = "Apple, Banana, Kiwi";
+        document.getElementById("demo3").innerHTML = text3.substring(0,5);
+    </script>
+
+    <p>Replace "Carrot" with "Potato" in the paragraph below:</p>
+    <button onclick="myFunction1()">Try it!</button>
+    <p id="demo4">Grow The Carrot!</p>
+
+    <script>
+        function myFunction1() {
+          let text4 = document.getElementById("demo4").innerHTML;
+          document.getElementById("demo4").innerHTML =
+          text4.replace("Carrot","Potato");
+        }
+    </script>
+
+    <p>Convert string to upper case:</p>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="demo5">hey!</p>
+
+    <script>
+    function myFunction2() {
+    let text5 = document.getElementById("demo5").innerHTML;
+    document.getElementById("demo5").innerHTML =
+    text5.toUpperCase();
+    }
+    </script>
+
+    <h1>Number Methods in JavaScript</h1>
+
+    <p>If you add two numbers, the result will be a number:</p>
+    <p id="demo6"></p>
+
+    <script>
+    let x1 = 5;
+    let y1 = 15;
+    let z1 = x1 + y1;
+    document.getElementById("demo6").innerHTML = z1;
+    </script>
+
+    <p>If you add two numeric strings, the result will be a concatenated string:</p>
+    <p id="demo7"></p>
+
+    <script>
+    let x2 = "5";
+    let y2 = "15";
+    let z2 = x2 + y2;
+    document.getElementById("demo7").innerHTML = z2;
+    </script>
+
+    <p>If you add a number and a numeric string, the result will be a concatenated string:</p>
+    <p id="demo8"></p>
+
+    <script>
+    let x3 = 5;
+    let y3 = "15";
+    let z3 = x3 + y3;
+    document.getElementById("demo8").innerHTML = z3;
+    </script>
+
+    <p>JavaScript will try to convert strings to numbers when dividing:</p>
+    <p id="demo9"></p>
+
+    <script>
+    let x4 = "100";
+    let y4 = "10";
+    let z4 = x4 / y4;   
+    document.getElementById("demo9").innerHTML = z4;
+    </script>
+
+    <p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+    <p id="demo10"></p>
+
+    <script>
+    document.getElementById("demo10").innerHTML = 100 / "Apple";
+    </script>
+
+    <h1>Array Methods in JavaScript</h1>
+
+    <p>The length property returns the length of an array:</p>
+
+    <p id="demo11"></p>
+
+    <script>
+    const Colors = ["Yellow", "Orange", "Red", "Green"];
+    let size = Colors.length;
+    document.getElementById("demo11").innerHTML = size;
+    </script>
+
+    <p>The pop() method removes the last element from an array.</p>
+
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+
+    <script>
+    const Pizza = ["Margarita", "Pepperoni", "Supreme", "Pineapple"];
+    document.getElementById("demo12").innerHTML = Pizza;
+    Pizza.pop();
+    document.getElementById("demo13").innerHTML = Pizza;
+    </script>
+
+    <p>The push() method appends a new element to an array:</p>
+
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <script>
+    const Fruits = ["Banana", "Orange", "Pear", "Apple"];
+    document.getElementById("demo14").innerHTML = Fruits;
+    Fruits.push("Mango");
+    document.getElementById("demo15").innerHTML = Fruits;
+    </script>
+
+    <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+
+    <script>
+    const Numbers = [42, 17, 8, 99];
+    document.getElementById("demo16").innerHTML = Numbers;
+    Numbers.shift();
+    document.getElementById("demo17").innerHTML = Numbers;
+    </script>
+
+    <p>Array elements are accessed using their index number:</p>
+
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+
+    <script>
+    const Names = ["Matthew", "Daniel", "Joshua", "Ivan"];
+    document.getElementById("demo18").innerHTML = Names;
+    Names[0] = "Homer";
+    document.getElementById("demo19").innerHTML = Names;
+    </script>
+
+    <h1>Date Methods in JavaScript</h1>
+
+    <p>Create a new date object with the current date and time:</p>
+    <p id="demo20"></p>
+
+    <script>
+    const d1 = new Date();
+    document.getElementById("demo20").innerHTML = d1;
+    </script>
+
+    <p>6 numbers specify year, month, day, hour, minute and second:</p>
+    <p id="demo20"></p>
+
+    <script>
+    const d2 = new Date(2018, 11, 24, 10, 33, 30);
+    document.getElementById("demo20").innerHTML = d2;
+    </script>
+
+    <p>Two digit years will be interpreted as 19xx:</p>
+    <p id="demo21"></p>
+
+    <script>
+    const d3 = new Date(99, 11, 24);
+    document.getElementById("demo21").innerHTML = d3;
+    </script>
+
+    <p>100000000000 milliseconds from January 01 1970 UTC is:</p>
+    <p id="demo22"></p>
+
+    <script>
+    const d4 = new Date(100000000000);
+    document.getElementById("demo22").innerHTML = d4;
+    </script>
+
+    <p>Convert a date to a string:</p>
+    <p id="demo23"></p>
+
+    <script>
+    const d5 = new Date();
+    document.getElementById("demo23").innerHTML = d5.toString();
+    </script>
+
+    <h1>Function Methods in JavaScript</h1> 
+
+    <p>Call a function which performs a calculation and returns the result:</p>
+
+    <p id="demo24"></p>
+
+    <script>
+    function myFunction(p1, p2) {
+    return p1 * p2;
+    }
+
+    let result = myFunction(8, 3);
+    document.getElementById("demo24").innerHTML = result;
+    </script>
+
+    <p>Using a function as a variable:</p>
+
+    <p id="demo25"></p>
+
+    <script>
+    let text = "The temperature is " + toCelsius(99) + " Celsius.";
+    document.getElementById("demo25").innerHTML = text;
+
+    function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+    } 
+    </script>
+
+</body>
+</html>
+
+
+

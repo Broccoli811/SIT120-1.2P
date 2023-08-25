@@ -1,0 +1,35 @@
+body, h1, ul {
+    margin-left: 5em;
+    margin-right: 5em;
+    background-color: lightyellow;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    body {
+        background-color: blue;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+  
